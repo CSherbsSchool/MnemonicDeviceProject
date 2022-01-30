@@ -1,0 +1,1 @@
+Hi my name is Evan, this is my last semester at WCC. I am pretty strong with using Java, SQL, HTML, Unix, and some PHP. I also do a lot of work with muisc and sound design if that is needed as well. I am excited to work with you all and get started on this project!
