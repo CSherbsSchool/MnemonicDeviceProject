@@ -1,1 +1,1 @@
-Hi my name is Francisco, I enjoy programming with Java, HTML, CSS, JavaScript, and SQl.
+Hi team! My name is Francisco and this is my last semester at WCC. The programming languages that I can use fairly well are Java, SQL, HTML, and CSS. I also have some experience with JS and PHP. I mostly enjoy the back-end part of programming. Looking forward to a great class with all of you!
