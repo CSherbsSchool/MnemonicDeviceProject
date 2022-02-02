@@ -1,0 +1,1 @@
+Hi, my name is Ifeadikanwa Eze. Everyone calls me Ify. This is my last semester at WCC. I've been studying computer science but with a focus on mobile development. I like painting and listening to music in my free time.
