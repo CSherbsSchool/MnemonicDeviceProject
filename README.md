@@ -1,13 +1,16 @@
 MnemonicDeviceProject
 
-Main features:
+Main features:    
+  * Login/Create Account 
+  * User generated mnemonic devices in flashcard form  
+  * Ability for users to search for existing mnemonic devices using tag system  
+  * User can save sets to profile, both personal, and public  
 
-  Mnemonic device generation 
-  User generated Mnemonic devices
-  Database of generated devices
-  Ability to save favorites
-  Flashcard system
-  Post for others to see
-  Searching with tag system
-  Sounds
-  Login
+Extra Features:   
+  * Auto-generated mnemonic device  
+  * Upvote System  
+  * Background music/sound effects  
+
+Also necessary:  
+  * UI/UX
+  * Database layout
