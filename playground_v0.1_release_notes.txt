@@ -1,0 +1,26 @@
+Playground v0.1
+********************
+
+— Some Quick notes —
+
+- Code is working, homepage is functional. Login button and create account are not redirected properly but that will be something I will have the backend work on.
+- If you want to access the login page just put /login after “/app”
+- The dispatcher should be all set, we may need to add more maven dependency as time goes on once we are more familiar with the tech we will be using.
+
+********************
+
+Front End:
+- Create a more fleshed out home page
+- Link the loginStyle CSS file to the login page ( or make a new one)
+- Create a Create a account page
+- Create a Forgot password page
+- Create a User Profile page
+
+Back End:
+- Set up the code so it can interact with the database
+- Fix the redirect routing for the login and create account button
+- Start getting the user dao and service implementations set up
+- Start creating a class for the flash card entity
+- Touch up on the JSP file where need be
+
+********************
