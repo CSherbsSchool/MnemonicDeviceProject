@@ -11,9 +11,14 @@ public class MainController {
 
 
 
-    @GetMapping("/login")
+    @PostMapping ("/login")
     public String login(Model model) {
         return "login";
+    }
+
+    @PostMapping ("/createAccount")
+    public String createAccount(Model model) {
+        return "createAccount";
     }
 
 }

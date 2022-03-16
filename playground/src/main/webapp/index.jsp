@@ -24,10 +24,10 @@
         <a href="#home" class="w3-bar-item w3-button">Mnemonic Device Flashcards</a>
         <!-- Right-sided navbar links. Hide them on small screens -->
         <div class="w3-right w3-hide-small">
-            <form action="${contextPath.request.contextPath}/login" method = "post">
+            <form action="${contextPath.request.contextPath}/app/login" method = "post">
                 <input type="submit" value="Log In" class="w3-bar-item w3-button">
             </form>
-            <form action="${contextPath.request.contextPath}/createAccount" method = "post">
+            <form action="${contextPath.request.contextPath}/app/createAccount" method = "post">
                 <input type="submit" value="Create A Account" class="w3-bar-item w3-button">
             </form>
         </div>
