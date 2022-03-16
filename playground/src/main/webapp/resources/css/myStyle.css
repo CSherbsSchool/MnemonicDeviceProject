@@ -1,3 +1,13 @@
+@charset "utf-8";
+
+.mdp-mat-icon-decorated {
+    font-family: Roboto;
+   
+    /* Following two lines copied from https://github.com/google/material-design-icons/issues/206#issuecomment-144290880 
+    display: inline-flex;
+    vertical-align: middle; */
+}
+
 .form-style-2{
 	padding: 20px 12px 10px 20px;
 	font: 13px Arial, Helvetica, sans-serif;
