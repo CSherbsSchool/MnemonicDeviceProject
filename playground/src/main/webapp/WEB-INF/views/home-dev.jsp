@@ -32,7 +32,7 @@
             </button>
             <div class="w3-dropdown-content w3-bar-block w3-border">
 			    <a href="${pageContext.request.contextPath}/login" class="w3-bar-item w3-button">Log in</a>
-			    <a href="#" class="w3-bar-item w3-button">Create account</a>
+			    <a href="${pageContext.request.contextPath}/createAccount" class="w3-bar-item w3-button">Create account</a>
 			    
 			</div>
         </div>
