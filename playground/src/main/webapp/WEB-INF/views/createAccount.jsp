@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/loginStyle.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/loginStyle.css" />
 </head>
 <body>
 <div class="container">
@@ -14,17 +13,16 @@
                 <input type="text" placeholder="Username" required="" id="username" />
             </div>
             <div>
+                <input type="text" placeholder="Email" required="" id="email" />
+            </div>
+            <div>
                 <input type="password" placeholder="Password" required="" id="password" />
             </div>
             <div>
-                <input type="submit" value="Log in" />
-                <a href="#">Lost your password?</a>
-                <form action="${contextPath.request.contextPath}/" method = "post">
-                    <a href="#">Back To Home</a>
-                </form>
-                <form action="${contextPath.request.contextPath}/app/createAccount" method = "post">
-                    <a href="/app/createAccount">Register</a>
-                </form>
+                <input type="password" placeholder="Confirm Password" required="" id="confirmpassword" />
+            </div>
+            <div>
+                <input type="submit" value="Create an account" />
             </div>
         </form><!-- form -->
 
