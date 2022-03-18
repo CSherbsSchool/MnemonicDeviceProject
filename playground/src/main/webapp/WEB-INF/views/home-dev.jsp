@@ -22,37 +22,8 @@
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
-    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-        <a href="#home" class="w3-bar-item w3-button">Mnemonic Device Flashcards</a>
-        <!-- User profile dropdown -->
-        
-        
-            <c:choose>
-           
-	            <c:when test="${user == null}">
-	               <div class="w3-right">
-		        
-		           	  <a class="w3-button mdp-mat-icon-decorated" href="${pageContext.request.contextPath}/login">
-		                   <i class="material-icons">person</i> Log in
-		              </a>
-		           </div>
-	            </c:when>
-	            <c:otherwise>
-	               <div class="w3-right w3-dropdown-hover">
-	                   <div class="w3-button mdp-mat-icon-decorated" href="${pageContext.request.contextPath}/login">
-                        	 <i class="material-icons">person</i> ${user.userName} <i class="material-icons">arrow_drop_down</i>
-                       </div>
-                       <div class="w3-dropdown-content w3-bar-block w3-border">
-			 		  		 <a href="#" class="w3-bar-item w3-button">View profile</a>
-			 	 			 <a href="#" class="w3-bar-item w3-button">Create deck</a>
-			 	 			 <a href="${pageContext.request.contextPath}/home-dev/logout" class="w3-bar-item w3-button">Log out</a>
-						</div>
-	               </div>
-	            </c:otherwise>
-        </c:choose>
-    </div>
-</div>
+<%@ include file="../../resources/jspf/navbar.jspf" %>
+
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
