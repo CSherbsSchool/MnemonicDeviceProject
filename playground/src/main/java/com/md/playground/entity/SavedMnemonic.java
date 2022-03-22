@@ -3,7 +3,7 @@ package com.md.playground.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Saved_Mnemonics")
+@Table(name = "saved_mnemonics")
 public class SavedMnemonic {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
