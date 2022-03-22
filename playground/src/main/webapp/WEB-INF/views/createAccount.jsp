@@ -2,25 +2,25 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/loginStyle.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/loginStyle.css" />
 </head>
 <body>
 <div class="container">
     <section id="content">
-        <form action="">
+        <form action="addUser" method="post">
             <h1>Login</h1>
             <div>
-                <input type="text" placeholder="Username" required="" id="username" />
+                <input type="text" name="userName" placeholder="Username" required="" id="username" />
             </div>
             <div>
-                <input type="text" placeholder="Email" required="" id="email" />
+                <input type="text" name="userEmail" placeholder="Email" required="" id="email" />
             </div>
             <div>
-                <input type="password" placeholder="Password" required="" id="password" />
+                <input type="password" name="userPassword" placeholder="Password" required="" id="password" />
             </div>
-            <div>
+           <!-- <div>
                 <input type="password" placeholder="Confirm Password" required="" id="confirmpassword" />
-            </div>
+            </div> -->
             <div>
                 <input type="submit" value="Create an account" />
             </div>

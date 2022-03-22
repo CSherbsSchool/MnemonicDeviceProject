@@ -2,9 +2,8 @@ package com.md.playground.entity;
 
 import javax.persistence.*;
 
-
 @Entity
-@Table(name = "Users")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -14,38 +13,63 @@ public class User {
 
     @Column(name = "username")
     private String userName;
+    
+    @Column(name = "email")
+    private String userEmail;
 
     @Column(name = "password")
     private String userPassword;
-
+    
+    
     public User() {
     }
 
-    public User(String userName, String userPassword) {
+    public User(String userName, String userEmail, String userPassword) {
         this.userName = userName;
+        this.userEmail = userEmail;
         this.userPassword = userPassword;
     }
+    
 
-    public int getId() {
-        return id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public String getUserName() {
-        return userName;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+	public String getUserName() {
+		return userName;
+	}
 
-    public String getUserPassword() {
-        return userPassword;
-    }
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
-    }
+	public String getUserEmail() {
+		return userEmail;
+	}
 
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
+	}
+
+	public String getUserPassword() {
+		return userPassword;
+	}
+
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", userName=" + userName + ", userEmail=" + userEmail + ", userPassword="
+				+ userPassword + "]";
+	}
+      
+		
 }
 
 

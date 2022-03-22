@@ -1,21 +1,38 @@
 package com.md.playground.Service;
 
+import com.md.playground.dao.UserRepository;
 import com.md.playground.entity.User;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
 
-@Repository
-public class UserServiceImp implements UserService{
+@Service
+public class UserServiceImp implements UserService {
 
     @Autowired
     private SessionFactory sessionFactory;
 
-    public User getUser(int id) {
+    @Autowired
+    private UserRepository repo;
+
+    @Override
+	public void createUser(User user) {
+    	repo.save(user);		
+	}
+
+
+	@Override
+	public void deleteUser(Integer id) {
+		repo.deleteById(id);
+	}
+	
+	@Override
+	public User getUser(int id) {
         Session session = sessionFactory.getCurrentSession();
         return session.get(User.class, id);
     }
+
 }

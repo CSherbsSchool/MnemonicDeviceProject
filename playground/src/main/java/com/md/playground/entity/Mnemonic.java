@@ -3,7 +3,7 @@ package com.md.playground.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Mnemonics")
+@Table(name = "mnemonics")
 public class Mnemonic {
 
     @Id
