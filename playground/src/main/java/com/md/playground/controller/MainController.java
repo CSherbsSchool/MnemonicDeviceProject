@@ -13,17 +13,16 @@ import com.md.playground.entity.User;
 
 @Controller
 public class MainController {
-
-        
+      
     @Autowired
     UserServiceImp serviceImp;
 	    
-    @RequestMapping("/")
+  @RequestMapping("/")
 	public String index(Model model)
 	{
 		return "index";
 	}
-	
+
 	@RequestMapping("/login")
 	public String login(Model model) 
 	{
@@ -38,10 +37,25 @@ public class MainController {
 		return "login";
 	}
 	
-	@RequestMapping("/home-dev")
-	public String testHome(Model model) 
-	{
+	@RequestMapping("/home-dev/login")
+	public String testHomeLogin(Model model) {
+		//TODO Add sign-in check elsewhere
+		User user = new User();
+		user.setUserName("John Doe");
+		model.addAttribute("user", user); // signed in
 		return "home-dev";
+	}
+	
+	@RequestMapping("/home-dev/logout")
+	public String testHomeLogout(Model model) {
+		//TODO Add sign-in check elsewhere
+		model.addAttribute("user", null); // signed out
+		return "home-dev";
+	}
+	
+	@RequestMapping("/home-dev")
+	public String testHome(Model model) {
+		return "redirect:/home-dev/login";
 	}
 	
 	@RequestMapping("/createAccount")
