@@ -12,8 +12,7 @@ public class MainController {
 	@RequestMapping("/home-dev/login")
 	public String testHomeLogin(Model model) {
 		//TODO Add sign-in check elsewhere
-		// Also, change the class configuration
-		User.user user = new User().new user();
+		User user = new User();
 		user.setUserName("John Doe");
 		model.addAttribute("user", user); // signed in
 		return "home-dev";
