@@ -3,31 +3,33 @@ package com.md.playground.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "Mnemonics")
 public class Mnemonic {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int id;
+    private int mnemonic_id;
 
     private String study_concept;
 
     private String mnemonic_device;
 
+    @Column(name = "private")
     private boolean isPrivate;
 
-    private String creator_username;
+    private int creator_userID;
 
-    protected Mnemonic() {}
+    public Mnemonic() {}
 
-    public Mnemonic(String study_concept, String mnemonic_device, boolean isPrivate, String creator_username) {
+    public Mnemonic(String study_concept, String mnemonic_device, boolean isPrivate, int creator_userID) {
         this.study_concept = study_concept;
         this.mnemonic_device = mnemonic_device;
         this.isPrivate = isPrivate;
-        this.creator_username = creator_username;
+        this.creator_userID = creator_userID;
     }
 
-    public int getId() {
-        return id;
+    public int getMnemonic_id() {
+        return mnemonic_id;
     }
 
     public String getStudy_concept() {
@@ -54,11 +56,11 @@ public class Mnemonic {
         isPrivate = aPrivate;
     }
 
-    public String getCreator_username() {
-        return creator_username;
+    public int getCreator_userID() {
+        return creator_userID;
     }
 
-    public void setCreator_username(String creator_username) {
-        this.creator_username = creator_username;
+    public void setCreator_userID(int creator_userID) {
+        this.creator_userID = creator_userID;
     }
 }

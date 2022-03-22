@@ -2,45 +2,48 @@ package com.md.playground.entity;
 
 import javax.persistence.*;
 
+
+@Entity
+@Table(name = "Users")
 public class User {
-    @Entity
-    @Table(name = "user")
-    public class user {
 
-        @Id
-        @GeneratedValue(strategy= GenerationType.IDENTITY)
-        @Column(name = "id")
-        private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "userID")
+    private int id;
 
-        @Column(name = "username")
-        private String userName;
+    @Column(name = "username")
+    private String userName;
 
-        @Column(name = "password")
-        private String userPassword;
+    @Column(name = "password")
+    private String userPassword;
 
-        public int getId() {
-            return id;
-        }
+    public User() {
+    }
 
-        public void setId(int id) {
-            this.id = id;
-        }
+    public User(String userName, String userPassword) {
+        this.userName = userName;
+        this.userPassword = userPassword;
+    }
 
-        public String getUserName() {
-            return userName;
-        }
+    public int getId() {
+        return id;
+    }
 
-        public void setUserName(String userName) {
-            this.userName = userName;
-        }
+    public String getUserName() {
+        return userName;
+    }
 
-        public String getUserPassword() {
-            return userPassword;
-        }
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-        public void setUserPassword(String userPassword) {
-            this.userPassword = userPassword;
-        }
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
 }
