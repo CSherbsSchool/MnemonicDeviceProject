@@ -3,23 +3,34 @@ package com.md.playground.entity;
 import javax.persistence.*;
 
 @Entity
-@IdClass(AccountId.class)
+@Table(name = "Saved_Mnemonics")
 public class SavedMnemonic {
     @Id
-    private String username;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int saved_mnemonicsID;
 
-    @Id
+    private int userID;
+
     private int mnemonic_id;
 
-    protected SavedMnemonic() {
+    public SavedMnemonic() {
     }
 
-    public String getUsername() {
-        return username;
+    public SavedMnemonic(int userID, int mnemonic_id) {
+        this.userID = userID;
+        this.mnemonic_id = mnemonic_id;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public int getSaved_mnemonicsID() {
+        return saved_mnemonicsID;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public int getMnemonic_id() {
