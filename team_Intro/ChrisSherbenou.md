@@ -1,0 +1,1 @@
+My name is Chris Sherbenou. I'm 30 years old and taking the Java program at WCC for a career change. I'm currently taking the Android, PHP/Wb, and Server classes along with this one this semester. So, I'm looking forward to learking a lot with all of you!

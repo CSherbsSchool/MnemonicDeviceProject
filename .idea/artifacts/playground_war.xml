@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="playground:war">
+    <output-path>$PROJECT_DIR$/playground/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>playground</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="playground-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="playground:war exploded" />
+    </root>
+  </artifact>
+</component>
