@@ -1,3 +1,9 @@
+@charset "utf-8";
+
+.mdp-mat-icon-decorated {
+    font-family: Roboto; /* The default font on Android */
+}
+
 .form-style-2{
 	padding: 20px 12px 10px 20px;
 	font: 13px Arial, Helvetica, sans-serif;
