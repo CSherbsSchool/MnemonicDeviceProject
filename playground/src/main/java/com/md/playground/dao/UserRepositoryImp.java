@@ -24,4 +24,5 @@ public class UserRepositoryImp implements UserRepository{
     public void deleteUser(int id) {
         userService.deleteUser(id);
     }
+
 }

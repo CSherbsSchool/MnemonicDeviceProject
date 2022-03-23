@@ -29,7 +29,6 @@ public class MainController {
 		return "login";
 	}
 
-
 	@RequestMapping("/home-dev/login")
 	public String testHomeLogin(Model model) {
 		//TODO Add sign-in check elsewhere
