@@ -22,11 +22,10 @@
 	</bean>
 	<bean id="myDataSource"
 		class="com.mchange.v2.c3p0.ComboPooledDataSource">
-	<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-	<property name="user" value="springDemo"></property>
-	<property name="password" value="springDemo"></property>
-	<property name="jdbcUrl"
-		value="jdbc:mysql://localhost:3306/movie?useSSL=false">
+	<property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
+	<property name="user" value="team"></property>
+	<property name="password" value="back!end8"></property>
+	<property name="jdbcUrl" value="jdbc:mysql://165.232.152.67:3306/mnemonic_playground?useSSL=false">
 	</property>
 	<property name="minPoolSize" value="5"></property>
 	<property name="maxPoolSize" value="20"></property>
