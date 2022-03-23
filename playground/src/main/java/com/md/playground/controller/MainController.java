@@ -28,14 +28,7 @@ public class MainController {
 	{
 	    return "login";
 	}
-	
-	@PostMapping(path = "/addUser")
-	public String addUser(User user)
-	{
-		System.out.println(user);
-		serviceImp.createUser(user);
-		return "login";
-	}
+
 	
 	@RequestMapping("/home-dev/login")
 	public String testHomeLogin(Model model) {

@@ -5,8 +5,11 @@ import com.md.playground.entity.User;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 
 @Service
@@ -15,20 +18,20 @@ public class UserServiceImp implements UserService {
     @Autowired
     private SessionFactory sessionFactory;
 
-    @Autowired
-    private UserRepository repo;
 
-    @Override
-	public void createUser(User user) {
-    	repo.save(user);		
+	public void saveUser(User user) {
+		Session session = sessionFactory.getCurrentSession();
+		session.saveOrUpdate(user);
 	}
 
 
-	@Override
-	public void deleteUser(Integer id) {
-		repo.deleteById(id);
+	public void deleteUser(int id) {
+		Session session = sessionFactory.getCurrentSession();
+		Query query = session.createQuery("delete from User where id = :id");
+		query.setParameter("id", id);
+		query.executeUpdate();
 	}
-	
+
 	@Override
 	public User getUser(int id) {
         Session session = sessionFactory.getCurrentSession();
