@@ -4,7 +4,7 @@ import com.md.playground.entity.User;
 
 public interface UserService {
 
-	public abstract void createUser(User user);
-	public abstract void deleteUser(Integer id);
+	public void saveUser(User user);
+	public void deleteUser(int id);
     public User getUser(int id);
 }
