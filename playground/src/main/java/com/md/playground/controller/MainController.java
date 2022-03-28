@@ -14,21 +14,30 @@ import com.md.playground.entity.User;
 @Controller
 public class MainController {
 
-	@Autowired
-	UserServiceImp serviceImp;
-
-	@RequestMapping("/")
+        
+    @Autowired
+    UserServiceImp serviceImp;
+	    
+    @RequestMapping("/")
 	public String index(Model model)
 	{
 		return "index";
 	}
-
+	
 	@RequestMapping("/login")
-	public String login(Model model)
+	public String login(Model model) 
 	{
+	    return "login";
+	}
+	
+	@PostMapping(path = "/addUser")
+	public String addUser(User user)
+	{
+		System.out.println(user);
+		serviceImp.createUser(user);
 		return "login";
 	}
-
+	
 	@RequestMapping("/home-dev/login")
 	public String testHomeLogin(Model model) {
 		//TODO Add sign-in check elsewhere
@@ -44,14 +53,14 @@ public class MainController {
 		model.addAttribute("user", null); // signed out
 		return "home-dev";
 	}
-
+	
 	@RequestMapping("/home-dev")
 	public String testHome(Model model) {
 		return "redirect:/home-dev/login";
 	}
-
+	
 	@RequestMapping("/createAccount")
-	public String createAccount(Model model)
+	public String createAccount(Model model) 
 	{
 		return "createAccount";
 	}
