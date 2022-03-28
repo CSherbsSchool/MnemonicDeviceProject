@@ -17,14 +17,10 @@
                 <input type="password" placeholder="Password" required="" id="password" />
             </div>
             <div>
-                <input type="submit" value="Log in"/>
+                <input type="submit" value="Log in" />
                 <a href="#">Lost your password?</a>
-                <form action="${contextPath.request.contextPath}/" method = "post">
-                    <a href="#">Back To Home</a>
-                </form>
-                <form action="${contextPath.request.contextPath}/app/createAccount" method = "post">
-                    <a href="/app/createAccount">Register</a>
-                </form>
+                <a href="/">Back To Home</a>
+                <a href="/createAccount">Register</a>
             </div>
         </form><!-- form -->
 
