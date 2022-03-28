@@ -18,9 +18,9 @@
             <div>
                 <input type="password" name="userPassword" placeholder="Password" required="" id="password" />
             </div>
-           <!-- <div>
+           <div>
                 <input type="password" placeholder="Confirm Password" required="" id="confirmpassword" />
-            </div> -->
+            </div>
             <div>
                 <input type="submit" value="Create an account" />
             </div>

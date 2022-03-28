@@ -13,16 +13,17 @@ import com.md.playground.entity.User;
 
 @Controller
 public class MainController {
-      
+
+        
     @Autowired
     UserServiceImp serviceImp;
 	    
-  @RequestMapping("/")
+    @RequestMapping("/")
 	public String index(Model model)
 	{
 		return "index";
 	}
-
+	
 	@RequestMapping("/login")
 	public String login(Model model) 
 	{
@@ -45,7 +46,7 @@ public class MainController {
 		model.addAttribute("user", user); // signed in
 		return "home-dev";
 	}
-	
+
 	@RequestMapping("/home-dev/logout")
 	public String testHomeLogout(Model model) {
 		//TODO Add sign-in check elsewhere

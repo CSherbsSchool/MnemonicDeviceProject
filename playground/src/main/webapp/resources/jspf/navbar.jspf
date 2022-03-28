@@ -1,13 +1,20 @@
 
 
-<!-- Navbar (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-        <a href="#home" class="w3-bar-item w3-button">Mnemonic Device Flashcards</a>
+        <a href="#home" class="w3-bar-item w3-button">MnemonicStudy.com</a>
+        
+        <!-- Search -->
+        <form class="w3-bar-item mdp-mat-icon-decorated" id="search-box-container">
+            <input type="text" class="w3-hide-small w3-hide-medium" name="query" placeholder="Search">
+            <input type="submit" class="w3-button material-icons" value="search">
+        </form>
+        
+        
         <!-- User profile dropdown -->
 		<c:choose>
 		
-		    <c:when test="${user == null}">
+		    <c:when test="${empty user}">
 		        <div class="w3-right">
 		
 		            <a class="w3-button mdp-mat-icon-decorated"
