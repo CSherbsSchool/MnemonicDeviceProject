@@ -19,8 +19,8 @@
             <div>
                 <input type="submit" value="Log in" />
                 <a href="#">Lost your password?</a>
-                <a href="/">Back To Home</a>
-                <a href="/createAccount">Register</a>
+                <a href="${pageContext.request.contextPath}/">Back To Home</a>
+                <a href="${pageContext.request.contextPath}/createAccount">Register</a>
             </div>
         </form><!-- form -->
 
