@@ -5,8 +5,7 @@
 <title>Playground</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 
 <%@ include file="/resources/jspf/dependencies.jspf"%>
 <style>
