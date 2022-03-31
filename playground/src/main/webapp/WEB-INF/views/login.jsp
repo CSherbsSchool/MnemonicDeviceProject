@@ -8,13 +8,13 @@
 <body>
 <div class="container">
     <section id="content">
-        <form action="">
+        <form action="loginUser" type="get">
             <h1>Login</h1>
             <div>
-                <input type="text" placeholder="Username" required="" id="username" />
+                <input type="text" name = "userName" placeholder="Username" required="" id="username" />
             </div>
             <div>
-                <input type="password" placeholder="Password" required="" id="password" />
+                <input type="password" name = "userPassword" placeholder="Password" required="" id="password" />
             </div>
             <div>
                 <input type="submit" value="Log in" />

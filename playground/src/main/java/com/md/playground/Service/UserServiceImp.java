@@ -6,6 +6,7 @@ import com.md.playground.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 
@@ -28,11 +29,14 @@ public class UserServiceImp implements UserService {
 	public void deleteUser(Integer id) {
 		repo.deleteById(id);
 	}
-	
-	@Override
-	public User getUser(int id) {
-        Session session = sessionFactory.getCurrentSession();
-        return session.get(User.class, id);
-    }
+
+
+	public User loadUserByUsername(String username) throws UsernameNotFoundException {
+		User user = repo.getUserByUsername(username);
+		if (user == null) {
+			throw new UsernameNotFoundException("Could not find user");
+		}
+		return user;
+	}
 
 }
