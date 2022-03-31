@@ -32,6 +32,10 @@ public class Mnemonic {
         return mnemonic_id;
     }
 
+    public void setMnemonic_id(int mnemonic_id) {
+        this.mnemonic_id = mnemonic_id;
+    }
+
     public String getStudy_concept() {
         return study_concept;
     }
