@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.md.playground.Service.UserServiceImp;
+import com.md.playground.entity.Mnemonic;
 import com.md.playground.entity.User;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -65,6 +66,13 @@ public class MainController {
 	public String createAccount(Model model) 
 	{
 		return "createAccount";
+	}
+	
+	@RequestMapping("/createFlashcard")
+	public String createFlashcard(Model model)
+	{
+		model.addAttribute("mnemonic", new Mnemonic());
+		return "createFlashcard";
 	}
 
 	@GetMapping(path = "/loginUser")
