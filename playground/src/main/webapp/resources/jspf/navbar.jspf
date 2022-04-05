@@ -14,7 +14,7 @@
 		<!-- User profile dropdown -->
 		<c:choose>
 
-			<c:when test="${empty user}">
+			<c:when test="${empty userName}">
 				<div class="w3-right">
 
 					<a class="w3-button mdp-mat-icon-decorated"
@@ -31,11 +31,14 @@
 				<div class="w3-right w3-dropdown-hover">
 					<div class="w3-button mdp-mat-icon-decorated"
 						 href="${pageContext.request.contextPath}/login">
-						<i class="material-icons">person</i> ${user.userName} <i
+						<i class="material-icons">person</i> ${userName} <i
 							class="material-icons">arrow_drop_down</i>
 					</div>
 					<div class="w3-dropdown-content w3-bar-block w3-border">
-						<a href="#" class="w3-bar-item w3-button">View profile</a> <a
+						<form action="list" method="post">
+						<a href="${pageContext.request.contextPath}/profile" class="w3-bar-item w3-button">View profile</a>
+							<input type="hidden" name="userID" value="${userID}"/>
+							<a
 							href="#" class="w3-bar-item w3-button">Create deck</a> <a
 							href="${pageContext.request.contextPath}/home-dev/logout"
 							class="w3-bar-item w3-button">Log out</a>

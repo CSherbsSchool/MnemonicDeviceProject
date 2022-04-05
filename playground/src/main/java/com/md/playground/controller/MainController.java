@@ -32,6 +32,14 @@ public class MainController {
 	{
 	    return "login";
 	}
+
+	@RequestMapping("/profile")
+	public String profile(Model model, @RequestParam("userID") int userID)
+	{
+		model.addAttribute("userID", user.getId());
+		model.addAttribute("userName", user.getUserName());
+		return "profileHome";
+	}
 	
 	@PostMapping(path = "/addUser")
 	public String addUser(User user)
@@ -76,10 +84,13 @@ public class MainController {
 	}
 
 	@GetMapping(path = "/loginUser")
-	public String loginUser(@RequestParam("userName") String userName)
+	public String loginUser(Model model, @RequestParam("userName") String userName)
 	{
 		System.out.println(userName);
 		User user = serviceImp.loadUserByUsername(userName);
+		System.out.println(user.getUserName() + " logged in... User ID:" + user.getId());
+		model.addAttribute("userName", user.getUserName());
+		model.addAttribute("userID", user.getId());
 		return "index";
 
 	}
