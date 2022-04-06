@@ -133,3 +133,12 @@ input[type=submit] {
     padding: 6px 14px;
 }
 
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: ghostwhite;
+   background-color: #37393A;
+   text-align: center;
+}
