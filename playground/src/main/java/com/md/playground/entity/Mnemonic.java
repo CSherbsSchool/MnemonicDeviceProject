@@ -10,6 +10,8 @@ public class Mnemonic {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int mnemonic_id;
 
+    private String title;
+
     private String study_concept;
 
     private String mnemonic_device;
@@ -21,7 +23,8 @@ public class Mnemonic {
 
     public Mnemonic() {}
 
-    public Mnemonic(String study_concept, String mnemonic_device, boolean isPrivate, int creator_userID) {
+    public Mnemonic(String title, String study_concept, String mnemonic_device, boolean isPrivate, int creator_userID) {
+        this.title = title;
         this.study_concept = study_concept;
         this.mnemonic_device = mnemonic_device;
         this.isPrivate = isPrivate;
@@ -34,6 +37,14 @@ public class Mnemonic {
 
     public void setMnemonic_id(int mnemonic_id) {
         this.mnemonic_id = mnemonic_id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getStudy_concept() {
@@ -56,8 +67,8 @@ public class Mnemonic {
         return isPrivate;
     }
 
-    public void setPrivate(boolean aPrivate) {
-        isPrivate = aPrivate;
+    public void setPrivate(boolean isPrivate) {
+        this.isPrivate = isPrivate;
     }
 
     public int getCreator_userID() {
