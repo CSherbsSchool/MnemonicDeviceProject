@@ -4,11 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.md.playground.Service.UserServiceImp;
+import com.md.playground.entity.Mnemonic;
 import com.md.playground.entity.User;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -28,6 +31,14 @@ public class MainController {
 	public String login(Model model) 
 	{
 	    return "login";
+	}
+
+	@RequestMapping("/profile")
+	public String profile(Model model, @RequestParam("userID") int userID)
+	{
+		model.addAttribute("userID", user.getId());
+		model.addAttribute("userName", user.getUserName());
+		return "profileHome";
 	}
 	
 	@PostMapping(path = "/addUser")
@@ -63,6 +74,25 @@ public class MainController {
 	public String createAccount(Model model) 
 	{
 		return "createAccount";
+	}
+	
+	@RequestMapping("/createFlashcard")
+	public String createFlashcard(Model model)
+	{
+		model.addAttribute("mnemonic", new Mnemonic());
+		return "createFlashcard";
+	}
+
+	@GetMapping(path = "/loginUser")
+	public String loginUser(Model model, @RequestParam("userName") String userName)
+	{
+		System.out.println(userName);
+		User user = serviceImp.loadUserByUsername(userName);
+		System.out.println(user.getUserName() + " logged in... User ID:" + user.getId());
+		model.addAttribute("userName", user.getUserName());
+		model.addAttribute("userID", user.getId());
+		return "index";
+
 	}
 
 }

@@ -46,7 +46,7 @@ public class Mnemonic {
     public void setTitle(String title) {
         this.title = title;
     }
-
+  
     public String getStudy_concept() {
         return study_concept;
     }

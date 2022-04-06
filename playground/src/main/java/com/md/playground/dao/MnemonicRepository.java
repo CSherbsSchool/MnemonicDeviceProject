@@ -3,9 +3,9 @@ package com.md.playground.dao;
 import com.md.playground.entity.Mnemonic;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-
 import java.util.List;
 
+@Repository
 public interface MnemonicRepository extends CrudRepository<Mnemonic, Integer> {
 
     @Query("SELECT m FROM Mnemonic m WHERE m.creator_userID = ?1")

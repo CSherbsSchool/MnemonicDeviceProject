@@ -42,6 +42,7 @@ public class MyRestController {
         mnemonicServiceImpl.deleteMnemonic(id);
     }
 
+
     //option 2
     @DeleteMapping("/deleteMnemonic")
     public void deleteMnemonicByParam(@RequestParam(name = "id") int id) {
@@ -67,6 +68,7 @@ public class MyRestController {
     public List<Mnemonic> getMnemonicsWithKeyword(@RequestParam(name = "keyword") String keyword) {
         return mnemonicServiceImpl.getMnemonicsWithKeyword(keyword);
     }
+
 
     //Tag
 
@@ -117,4 +119,5 @@ public class MyRestController {
     List<SavedMnemonic> getAllUserSavedMnemonics(@RequestParam(name = "userID") int userID){
         return savedMnemonicServiceImpl.getAllUserSavedMnemonics(userID);
     }
+
 }

@@ -17,9 +17,9 @@
 </head>
 <body style="background-color: #414762;">
     <div id="navbar">
-        <%@ include file="/resources/jspf/navbar.jspf" %>
+        <%@ include file="${pageContext.request.contextPath}/resources/jspf/navbar.jsp" %>
     </div>
-    <h1 style="color: ghostwhite; padding: 0.5rem 2.5rem;">My Mnemonics</h1>
+    <h1 style="color: ghostwhite; padding: 0.5rem 2.5rem;">${userName} Mnemonics</h1>
     <div class="wrapper" style="clear: both">
    
         <ul class="grid cards">
