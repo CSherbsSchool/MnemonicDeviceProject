@@ -34,9 +34,9 @@ public class MainController {
 	}
 
 	@RequestMapping("/profile")
-	public String profile(Model model, @RequestParam("userID") int userID)
+	public String profile(Model model, @RequestParam("userName") String userName)
 	{
-		model.addAttribute("userID", user.getId());
+		User user = serviceImp.loadUserByUsername(userName);
 		model.addAttribute("userName", user.getUserName());
 		return "profileHome";
 	}
