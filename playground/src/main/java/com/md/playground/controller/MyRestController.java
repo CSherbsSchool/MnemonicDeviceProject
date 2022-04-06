@@ -2,8 +2,12 @@ package com.md.playground.controller;
 
 
 import com.md.playground.Service.MnemonicServiceImpl;
+import com.md.playground.Service.SavedMnemonicServiceImpl;
+import com.md.playground.Service.TagServiceImpl;
 import com.md.playground.Service.UserServiceImp;
 import com.md.playground.entity.Mnemonic;
+import com.md.playground.entity.SavedMnemonic;
+import com.md.playground.entity.Tag;
 import com.md.playground.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -38,6 +42,8 @@ public class MyRestController {
         mnemonicServiceImpl.deleteMnemonic(id);
     }
 
+
+    //option 2
     @DeleteMapping("/deleteMnemonic")
     public void deleteMnemonicByParam(@RequestParam(name = "id") int id) {
         mnemonicServiceImpl.deleteMnemonic(id);
@@ -61,6 +67,57 @@ public class MyRestController {
     @GetMapping("/getMnemonicsWithKeyword")
     public List<Mnemonic> getMnemonicsWithKeyword(@RequestParam(name = "keyword") String keyword) {
         return mnemonicServiceImpl.getMnemonicsWithKeyword(keyword);
+    }
+
+
+    //Tag
+
+    @Autowired
+    TagServiceImpl tagServiceImpl;
+
+    @PostMapping("/createTag")
+    public void createTag(@RequestBody Tag tag) {
+        tagServiceImpl.createTag(tag);
+    }
+
+    @DeleteMapping("/deleteTag")
+    public void deleteTag(@RequestParam(name = "tagID") int tagID) {
+        tagServiceImpl.deleteTag(tagID);
+    }
+
+    @GetMapping("/getTag")
+    public Tag getTag(@RequestParam(name = "tagID") int tagID){
+        return tagServiceImpl.getTag(tagID);
+    }
+
+    @GetMapping("/getAllMnemonicTags")
+    public List<Tag> getAllMnemonicTags(@RequestParam(name = "mnemonicID") int mnemonic_id) {
+        return tagServiceImpl.getAllMnemonicTags(mnemonic_id);
+    }
+
+    //Saved Mnemonics
+
+    @Autowired
+    SavedMnemonicServiceImpl savedMnemonicServiceImpl;
+
+    @PostMapping("/createSavedMnemonic")
+    public void createSavedMnemonic(@RequestBody SavedMnemonic savedMnemonic) {
+        savedMnemonicServiceImpl.createSaveMnemonic(savedMnemonic);
+    }
+
+    @DeleteMapping("/deleteSavedMnemonic")
+    public void deleteSavedMnemonic(@RequestParam(name = "savedMnemonicID") int savedMnemonicID) {
+        savedMnemonicServiceImpl.deleteSavedMnemonic(savedMnemonicID);
+    }
+
+    @GetMapping("/getSavedMnemonic")
+    public SavedMnemonic getSavedMnemonic(@RequestParam(name = "savedMnemonicID") int savedMnemonicID){
+        return savedMnemonicServiceImpl.getSavedMnemonic(savedMnemonicID);
+    }
+
+    @GetMapping("/getAllUserSavedMnemonics")
+    List<SavedMnemonic> getAllUserSavedMnemonics(@RequestParam(name = "userID") int userID){
+        return savedMnemonicServiceImpl.getAllUserSavedMnemonics(userID);
     }
 
 }
