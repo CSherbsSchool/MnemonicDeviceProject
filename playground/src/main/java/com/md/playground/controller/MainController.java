@@ -77,10 +77,12 @@ public class MainController {
 		return "createAccount";
 	}
 	
-	@RequestMapping("/createFlashcard")
-	public String createFlashcard(Model model)
+	@PostMapping("/createFlashcard")
+	public String createFlashcard(Model model, @RequestParam("userID") int userID)
 	{
-		model.addAttribute("mnemonic", new Mnemonic());
+		User user = serviceImp.getUser(userID);
+		model.addAttribute("userName", user.getUserName());
+		model.addAttribute("userID", user.getId());
 		return "createFlashcard";
 	}
 
