@@ -33,10 +33,11 @@ public class MainController {
 	    return "login";
 	}
 
-	@RequestMapping("/profile")
+	@PostMapping("/profile")
 	public String profile(Model model, @RequestParam("userID") int userID)
 	{
 		User user = serviceImp.getUser(userID);
+		model.addAttribute("userName", user.getUserName());
 		model.addAttribute("userID", user.getId());
 		return "profileHome";
 	}
