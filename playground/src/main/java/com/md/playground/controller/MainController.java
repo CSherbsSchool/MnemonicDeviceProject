@@ -1,17 +1,17 @@
 package com.md.playground.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.md.playground.Service.MnemonicServiceImpl;
 import com.md.playground.Service.UserServiceImp;
 import com.md.playground.entity.Mnemonic;
 import com.md.playground.entity.User;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -20,6 +20,11 @@ public class MainController {
         
     @Autowired
     UserServiceImp serviceImp;
+    
+    @Autowired
+    MnemonicServiceImpl mnemonicServiceImp;
+    
+    
 	    
     @RequestMapping("/")
 	public String index(Model model)
@@ -38,6 +43,7 @@ public class MainController {
 	{
 		User user = serviceImp.getUser(userID);
 		model.addAttribute("userID", user.getId());
+		model.addAttribute("mnemonics", mnemonicServiceImp.getMnemonicsCreatedByUser(userID));
 		return "profileHome";
 	}
 	
