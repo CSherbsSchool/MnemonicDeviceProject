@@ -1,17 +1,15 @@
 package com.md.playground.controller;
 
+import com.md.playground.Service.MnemonicServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import com.md.playground.Service.UserServiceImp;
 import com.md.playground.entity.Mnemonic;
 import com.md.playground.entity.User;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -20,6 +18,9 @@ public class MainController {
         
     @Autowired
     UserServiceImp serviceImp;
+
+	@Autowired
+	MnemonicServiceImpl mnemonicServiceImpl;
 	    
     @RequestMapping("/")
 	public String index(Model model)
@@ -84,6 +85,13 @@ public class MainController {
 		model.addAttribute("userName", user.getUserName());
 		model.addAttribute("userID", user.getId());
 		return "createFlashcard";
+	}
+
+	@PostMapping("/addMnemonic")
+	public String addMnemonics(Model model, Mnemonic mnemonic) {
+		System.out.println(mnemonic.toString());
+		mnemonicServiceImpl.createMnemonic(mnemonic);
+		return "index";
 	}
 
 	@GetMapping(path = "/loginUser")

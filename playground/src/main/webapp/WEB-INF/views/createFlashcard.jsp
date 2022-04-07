@@ -15,13 +15,40 @@
 	<br>
 	<br>
 	<br>
-	<form:form modelAttribute="mnemonic">
-		<form:input path="mnemonic_device" placeholder="Mnemonic"></form:input>
-		<form:input path="study_concept" placeholder="Study Concept"></form:input>
-		<br>
-		<form:checkbox path="private" label="Make Private" />
-		<br>
-		<input type="Submit" value="Post">
-	</form:form>
+	<p>UserId: ${userID}</p>
+<%--	<form:form modelAttribute="mnemonic" action="addMnemonic" method="POST">--%>
+<%--		<form:input path="title" placeholder="Mnemonic" />--%>
+<%--		<form:input path="mnemonic_device" placeholder="Mnemonic"/>--%>
+<%--		<form:input path="study_concept" placeholder="Study Concept"/>--%>
+<%--		<form:hidden path="creator_userID" value="${userID}"/>--%>
+<%--		<br>--%>
+<%--		<form:checkbox path="isPrivate" label="Make Private" />--%>
+<%--		<br>--%>
+<%--		<input type="Submit" value="Post">--%>
+<%--	</form:form>--%>
+
+	<form action="addMnemonic" method="post">
+		<h1>Create Mnemonic</h1>
+		<div>
+			<input type="text" name="title" placeholder="Title" required="" id="title" />
+		</div>
+		<div>
+			<input type="text" name="study_concept" placeholder="Study Concept" required="" id="study_concept" />
+		</div>
+		<div>
+			<input type="text" name="mnemonic_device" placeholder="Mnemonic Device" required="" id="mnemonic_device" />
+		</div>
+		<div>
+			<input type='hidden' value='0' name='isPrivate'>
+			<input type="checkbox" name="isPrivate" value="1" id="isPrivate" />
+			<label for="isPrivate"> Make Private</label>
+		</div>
+		<div>
+			<input type="hidden"  name="creator_userID" value="${userID}" id="creator_userID" />
+		</div>
+		<div>
+			<input type="submit" value="Post" />
+		</div>
+	</form>
 </body>
 </html>

@@ -78,4 +78,16 @@ public class Mnemonic {
     public void setCreator_userID(int creator_userID) {
         this.creator_userID = creator_userID;
     }
+
+    @Override
+    public String toString() {
+        return "Mnemonic{" +
+                "mnemonic_id=" + mnemonic_id +
+                ", title='" + title + '\'' +
+                ", study_concept='" + study_concept + '\'' +
+                ", mnemonic_device='" + mnemonic_device + '\'' +
+                ", isPrivate=" + isPrivate +
+                ", creator_userID=" + creator_userID +
+                '}';
+    }
 }
