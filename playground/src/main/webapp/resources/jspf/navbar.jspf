@@ -35,9 +35,11 @@
 							class="material-icons">arrow_drop_down</i>
 					</div>
 					<div class="w3-dropdown-content w3-bar-block w3-border">
-						<form action="list" method="post">
-						<a href="${pageContext.request.contextPath}/profile" class="w3-bar-item w3-button">View profile</a>
+						<form action="profile" method="post" >
+<%--						<a href="${pageContext.request.contextPath}/profile" class="w3-bar-item w3-button">View profile</a>--%>
 							<input type="hidden" name="userID" value="${userID}"/>
+							<input type="submit" value="View profile" style="color:#000;border:0px #000 solid;background-color:#fff;" class="w3-bar-item w3-button"/>
+						</form>
 							<a
 							href="#" class="w3-bar-item w3-button">Create deck</a> <a
 							href="${pageContext.request.contextPath}/home-dev/logout"
