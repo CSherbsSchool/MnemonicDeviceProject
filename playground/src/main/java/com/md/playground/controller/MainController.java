@@ -1,12 +1,17 @@
 package com.md.playground.controller;
 
+import com.md.playground.Service.MnemonicServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import org.springframework.web.bind.annotation.*;
+
 
 import com.md.playground.Service.MnemonicServiceImpl;
 import com.md.playground.Service.UserServiceImp;
@@ -18,15 +23,15 @@ import com.md.playground.entity.User;
 public class MainController {
 
         
-    @Autowired
-    UserServiceImp serviceImp;
-    
-    @Autowired
-    MnemonicServiceImpl mnemonicServiceImp;
-    
-    
+  @Autowired
+  UserServiceImp serviceImp;
+
+
+	@Autowired
+	MnemonicServiceImpl mnemonicServiceImpl;
+
 	    
-    @RequestMapping("/")
+  @RequestMapping("/")
 	public String index(Model model)
 	{
 		return "index";
@@ -38,12 +43,13 @@ public class MainController {
 	    return "login";
 	}
 
-	@RequestMapping("/profile")
+	@PostMapping("/profile")
 	public String profile(Model model, @RequestParam("userID") int userID)
 	{
 		User user = serviceImp.getUser(userID);
+		model.addAttribute("userName", user.getUserName());
 		model.addAttribute("userID", user.getId());
-		model.addAttribute("mnemonics", mnemonicServiceImp.getMnemonicsCreatedByUser(userID));
+		model.addAttribute("mnemonics", mnemonicServiceImpl.getMnemonicsCreatedByUser(userID));
 		return "profileHome";
 	}
 	
@@ -82,11 +88,20 @@ public class MainController {
 		return "createAccount";
 	}
 	
-	@RequestMapping("/createFlashcard")
-	public String createFlashcard(Model model)
+	@PostMapping("/createFlashcard")
+	public String createFlashcard(Model model, @RequestParam("userID") int userID)
 	{
-		model.addAttribute("mnemonic", new Mnemonic());
+		User user = serviceImp.getUser(userID);
+		model.addAttribute("userName", user.getUserName());
+		model.addAttribute("userID", user.getId());
 		return "createFlashcard";
+	}
+
+	@PostMapping("/addMnemonic")
+	public String addMnemonics(Model model, Mnemonic mnemonic) {
+		System.out.println(mnemonic.toString());
+		mnemonicServiceImpl.createMnemonic(mnemonic);
+		return "index";
 	}
 
 	@GetMapping(path = "/loginUser")

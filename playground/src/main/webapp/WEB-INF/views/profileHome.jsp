@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 </style>
 </head>
 <body style="background-color: #414762;">
+
 	<div id="navbar">
 
 		<%@ include file="/resources/jspf/navbar.jspf"%>
@@ -47,6 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 			<%--   <a href="https://www.google.com" style="text-decoration: none;"><li>
+
                     <h2>Set 4</h2>
                     
             </li></a>    
