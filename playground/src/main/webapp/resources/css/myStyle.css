@@ -115,6 +115,10 @@ li a:hover {
     background-color:grey;
 } 
 
+input {
+	letter-spacing: 4px;
+}
+
 input[type=submit] {
     background-color: #4A9270;
     color: white;
