@@ -9,4 +9,5 @@ public interface TagService {
     Tag getTag(int id);
     void deleteTag(int id);
     List<Tag> getAllMnemonicTags(int mnemonic_id);
+    List<Object[]> getMnemonicIdsOfTagsWithKeyword(String keyword);
 }
