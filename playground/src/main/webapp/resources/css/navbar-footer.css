@@ -1,0 +1,39 @@
+.mdp-mat-icon-decorated {
+    font-family: Roboto; /* The default font on Android */
+}
+
+.mdp-mat-icon-decorated > * {
+    vertical-align: middle; /* idea from https://bit.ly/3LaxtTt */
+}
+
+input {
+	letter-spacing: 4px;
+}
+
+input[type=submit] {
+    background-color: #4A9270;
+    color: white;
+}
+
+#search-box-container { 
+    padding-top: 0px; /* internal elements already have their own padding */
+    
+    display: flex; /* remove spacing between box and button, idea from https://bit.ly/3D9hbHv */    
+}
+
+
+
+#search-box-container > input:not([type=submit]) {
+    border: solid 2px #37393A;
+    padding: 6px 14px;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: ghostwhite;
+   background-color: #37393A;
+   text-align: center;
+}

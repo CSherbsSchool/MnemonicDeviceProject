@@ -5,7 +5,7 @@
 <title>My Sets : MnemonicStudy.com</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<%@ include file="/resources/jspf/dependencies.jspf"%>
+
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/profileHome.css">
 
