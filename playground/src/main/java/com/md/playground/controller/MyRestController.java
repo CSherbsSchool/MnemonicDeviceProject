@@ -130,11 +130,7 @@ public class MyRestController {
 
     @GetMapping("/searchForMnemonics")
     public List<Mnemonic> searchForMnemonics(@RequestParam(name = "keyword") String keyword) {
-        return searchServiceImpl.searchForMnemonics_Word(keyword);
+        return searchServiceImpl.searchForMnemonics(keyword);
     }
 
-    @GetMapping("/searchForSentenceInMnemonics")
-    public List<Mnemonic> searchForSentenceInMnemonics(@RequestParam(name = "keyword") String keyword) {
-        return searchServiceImpl.searchForMnemonics_Sentence(keyword);
-    }
 }
