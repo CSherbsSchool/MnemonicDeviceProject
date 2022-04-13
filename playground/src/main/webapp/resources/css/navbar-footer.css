@@ -1,3 +1,11 @@
+.mdp-mat-icon-decorated {
+    font-family: Roboto; /* The default font on Android */
+}
+
+.mdp-mat-icon-decorated > * {
+    vertical-align: middle; /* idea from https://bit.ly/3LaxtTt */
+}
+
 input {
 	letter-spacing: 4px;
 }
