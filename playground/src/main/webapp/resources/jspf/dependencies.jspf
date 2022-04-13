@@ -11,8 +11,3 @@
 
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
-        
-<%-- Custom stylesheets --%>
-<link rel="stylesheet"
-    href="${pageContext.request.contextPath}/resources/css/myStyle.css">
