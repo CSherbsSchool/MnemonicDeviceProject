@@ -1,19 +1,18 @@
 package com.md.playground.controller;
 
-import com.md.playground.Service.MnemonicServiceImpl;
+import java.util.List;
+import java.util.stream.Stream;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import org.springframework.web.bind.annotation.*;
-
-
 import com.md.playground.Service.MnemonicServiceImpl;
+import com.md.playground.Service.SavedMnemonicServiceImpl;
 import com.md.playground.Service.UserServiceImp;
 import com.md.playground.entity.Mnemonic;
 import com.md.playground.entity.User;
@@ -23,15 +22,17 @@ import com.md.playground.entity.User;
 public class MainController {
 
         
-  @Autowired
-  UserServiceImp serviceImp;
+    @Autowired
+    UserServiceImp serviceImp;
 
 
 	@Autowired
 	MnemonicServiceImpl mnemonicServiceImpl;
 
-	    
-  @RequestMapping("/")
+	@Autowired
+	SavedMnemonicServiceImpl savedMnemonicServiceImpl;
+	
+    @RequestMapping("/")
 	public String index(Model model)
 	{
 		return "index";
@@ -47,9 +48,22 @@ public class MainController {
 	public String profile(Model model, @RequestParam("userID") int userID)
 	{
 		User user = serviceImp.getUser(userID);
+		
+		//Basic signin info setup
 		model.addAttribute("userName", user.getUserName());
 		model.addAttribute("userID", user.getId());
-		model.addAttribute("mnemonics", mnemonicServiceImpl.getMnemonicsCreatedByUser(userID));
+		
+		//Get mnemonics that should be on the profile page
+		Stream<Mnemonic> userMnemonicStream = mnemonicServiceImpl.getMnemonicsCreatedByUser(userID).stream();
+		Stream<Mnemonic> savedMnemonicStream = savedMnemonicServiceImpl.getAllUserSavedMnemonics(userID).stream()
+				.map(savedMnemonic -> {
+					return mnemonicServiceImpl.getMnemonic(savedMnemonic.getMnemonic_id());
+				});
+		List<Mnemonic> allMnemonics = Stream.concat(userMnemonicStream, savedMnemonicStream).toList();
+		
+		//Add the list of mnemonics to the model
+		model.addAttribute("mnemonics", allMnemonics);
+		
 		return "profileHome";
 	}
 	
