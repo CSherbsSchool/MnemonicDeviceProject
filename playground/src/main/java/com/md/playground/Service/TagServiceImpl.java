@@ -1,7 +1,6 @@
 package com.md.playground.Service;
 
 import com.md.playground.dao.TagRepository;
-import com.md.playground.dao.UserRepository;
 import com.md.playground.entity.Tag;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +34,11 @@ public class TagServiceImpl implements TagService {
     @Override
     public List<Tag> getAllMnemonicTags(int mnemonic_id) {
         return repository.getAllMnemonicTags(mnemonic_id);
+    }
+
+    @Override
+    public List<Object[]> getMnemonicIdsOfTagsWithKeyword(String keyword) {
+        return repository.getMnemonicIdsOfTagsWithKeyword(keyword);
     }
 
 }

@@ -1,10 +1,7 @@
 package com.md.playground.controller;
 
 
-import com.md.playground.Service.MnemonicServiceImpl;
-import com.md.playground.Service.SavedMnemonicServiceImpl;
-import com.md.playground.Service.TagServiceImpl;
-import com.md.playground.Service.UserServiceImp;
+import com.md.playground.Service.*;
 import com.md.playground.entity.Mnemonic;
 import com.md.playground.entity.SavedMnemonic;
 import com.md.playground.entity.Tag;
@@ -95,6 +92,11 @@ public class MyRestController {
         return tagServiceImpl.getAllMnemonicTags(mnemonic_id);
     }
 
+    @GetMapping("/getMnemonicIdsOfTagsWithKeyword")
+    public List<Object[]> getMnemonicIdsOfTagsWithKeyword(@RequestParam(name = "keyword") String keyword) {
+        return tagServiceImpl.getMnemonicIdsOfTagsWithKeyword(keyword);
+    }
+
     //Saved Mnemonics
 
     @Autowired
@@ -118,6 +120,17 @@ public class MyRestController {
     @GetMapping("/getAllUserSavedMnemonics")
     List<SavedMnemonic> getAllUserSavedMnemonics(@RequestParam(name = "userID") int userID){
         return savedMnemonicServiceImpl.getAllUserSavedMnemonics(userID);
+    }
+
+
+    //Search
+
+    @Autowired
+    SearchServiceImpl searchServiceImpl;
+
+    @GetMapping("/searchForMnemonics")
+    public List<Mnemonic> searchForMnemonics(@RequestParam(name = "keyword") String keyword) {
+        return searchServiceImpl.searchForMnemonics(keyword);
     }
 
 }

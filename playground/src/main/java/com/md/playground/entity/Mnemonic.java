@@ -1,6 +1,7 @@
 package com.md.playground.entity;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "mnemonics")
@@ -89,5 +90,18 @@ public class Mnemonic {
                 ", isPrivate=" + isPrivate +
                 ", creator_userID=" + creator_userID +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Mnemonic mnemonic = (Mnemonic) o;
+        return mnemonic_id == mnemonic.mnemonic_id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(mnemonic_id);
     }
 }
