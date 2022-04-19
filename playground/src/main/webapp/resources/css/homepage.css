@@ -1,0 +1,43 @@
+@charset "ISO-8859-1";
+
+@import url("material-helpers.css");
+
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: "Times New Roman", Georgia, Serif;
+	background: linear-gradient(45deg, #4a9270, #2c5844);
+}
+
+#content * {
+	color: #FBFBFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Playfair Display";
+	letter-spacing: 5px;
+}
+
+#content .w3-button {
+	background-color: #FBFBFF;
+	color: initial;
+	text-transform: uppercase;
+}
+
+#content .w3-button * {
+	color: initial;
+}
+
+#button-container {
+	position: absolute;
+    bottom: 40%;
+    width: 100%;
+}
+
+p {
+	margin: 16px;
+}
+
