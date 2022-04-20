@@ -53,5 +53,16 @@ public class MnemonicServiceImpl implements MnemonicService{
         return repository.getMnemonicsWithKeyword(keyword);
     }
 
+	@Override
+	public String[] splitMnemonic(Mnemonic mnemonic) {
+		String[] showMnemonic =  mnemonic.getMnemonic_device().split(" ");
+		return showMnemonic;
+	}
+
+	@Override
+	public String[] splitConcept(Mnemonic mnemonic) {
+		String[] showConcept = mnemonic.getStudy_concept().split(" ");
+		return showConcept;
+	}
 
 }

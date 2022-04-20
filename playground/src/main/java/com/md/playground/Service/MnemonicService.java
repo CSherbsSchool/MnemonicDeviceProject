@@ -16,4 +16,8 @@ public interface MnemonicService {
     List<Mnemonic> getAllMnemonics();
 
     List<Mnemonic> getMnemonicsWithKeyword(String keyword);
+    
+    String[] splitMnemonic(Mnemonic mnemonic);
+    
+    String[] splitConcept(Mnemonic mnemonic);
 }
