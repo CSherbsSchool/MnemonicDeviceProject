@@ -34,8 +34,8 @@ h1, h2, h3, h4, h5, h6 {
 
 		<ul class="grid cards">
 			<c:forEach items="${mnemonics}" var="i">
-				<a href="#" style="text-decoration: none;"><li>
-						<h2>${i.title}</h2> 
+				<a href=${pageContext.request.contextPath}/viewFlashcard/${userID}/${i.mnemonic_id} style="text-decoration: none;"><li>			
+						<h2>${i.title}</h2>
 						<c:choose>
 							<c:when test="${i.isPrivate}">
 								<p style="color: #FF8585">Private</p>

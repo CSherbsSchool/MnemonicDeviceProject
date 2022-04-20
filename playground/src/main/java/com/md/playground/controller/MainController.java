@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -111,6 +112,25 @@ public class MainController {
 		return "createFlashcard";
 	}
 
+	@RequestMapping("/viewFlashcard/{userID}/{mnemonic_id}")
+	public String viewMnemonic(Model model, @PathVariable int mnemonic_id, @PathVariable("userID") int userID)
+	{
+		User user = serviceImp.getUser(userID);
+		
+		//Basic signin info setup
+		model.addAttribute("userName", user.getUserName());
+		model.addAttribute("userID", user.getId());
+		
+		Mnemonic mnemonic = mnemonicServiceImpl.getMnemonic(mnemonic_id);
+		String[] showMnemonic = mnemonicServiceImpl.splitMnemonic(mnemonic);
+		String[] showConcept = mnemonicServiceImpl.splitConcept(mnemonic);
+		model.addAttribute("mnemonic", mnemonic);
+		model.addAttribute("device", showMnemonic);
+		model.addAttribute("concept", showConcept);
+		
+		return "studyView";
+	}
+	
 	@PostMapping("/addMnemonic")
 	public String addMnemonics(Model model, Mnemonic mnemonic) {
 		System.out.println(mnemonic.toString());
