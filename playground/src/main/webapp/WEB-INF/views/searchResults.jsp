@@ -17,11 +17,11 @@
         <h1 style="color: ghostwhite">Search Results</h1>
         
         <ul class="grid cards">
-            <c:forEach items="${mnemonics}" var="i">
+            <c:forEach items="${mnemonics}" var="mnemonic">
                 <a href="#" style="text-decoration: none;"><li> 
                 
-                    <h2 style="color: ghostwhite">Title</h2>
-                    <p style="color: ghostwhite">by user</p>
+                    <h2 style="color: ghostwhite">${mnemonic.title}</h2>
+                    <p style="color: ghostwhite">${mnemonic.creator_userID}</p>
             
                 </li> </a>
             

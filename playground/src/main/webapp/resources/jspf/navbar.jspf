@@ -5,7 +5,7 @@
 		<a href="#home" class="w3-bar-item w3-button">MnemonicStudy.com</a>
 
 		<!-- Search -->
-		<form class="w3-bar-item mdp-mat-icon-decorated" id="search-box-container">
+		<form action="searchForMnemonics" method="post" class="w3-bar-item mdp-mat-icon-decorated" id="search-box-container">
 			<input type="text" class="w3-hide-small w3-hide-medium" name="query" placeholder="Search">
 			<input type="submit" class="w3-button material-icons" value="search">
 		</form>

@@ -3,6 +3,7 @@ package com.md.playground.controller;
 import java.util.List;
 import java.util.stream.Stream;
 
+import com.md.playground.Service.SearchServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,6 +33,9 @@ public class MainController {
 
 	@Autowired
 	SavedMnemonicServiceImpl savedMnemonicServiceImpl;
+
+	@Autowired
+	SearchServiceImpl searchServiceImpl;
 	
     @RequestMapping("/")
 	public String index(Model model)
@@ -111,6 +115,16 @@ public class MainController {
 		model.addAttribute("userID", user.getId());
 		return "createFlashcard";
 	}
+
+	@PostMapping("/searchForMnemonics")
+	public String searchForMnemonics(Model model, @RequestParam("query") String query)
+	{
+		List<Mnemonic> results = searchServiceImpl.searchForMnemonics(query);
+		System.out.println(results);
+		model.addAttribute("mnemonics", results);
+		return "searchResults";
+	}
+
 
 	@RequestMapping("/viewFlashcard/{userID}/{mnemonic_id}")
 	public String viewMnemonic(Model model, @PathVariable int mnemonic_id, @PathVariable("userID") int userID)
