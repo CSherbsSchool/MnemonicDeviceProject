@@ -89,7 +89,7 @@ public class MainController {
 	public String testHomeLogout(Model model) {
 		//TODO Add sign-in check elsewhere
 		model.addAttribute("user", null); // signed out
-		return "home-dev";
+		return "index";
 	}
 	
 	@RequestMapping("/home-dev")
