@@ -15,14 +15,14 @@
 	</div>
 	<br><br><br><br><br>
         
-        <h1 style="color: ghostwhite">Search Results</h1>
+        <h1 style="color: black;">Search Results</h1>
         
         <ul class="grid cards">
             <c:forEach items="${mnemonics}" var="mnemonic">
-                <a href="#" style="text-decoration: none;"><li> 
+                <a href="#" style="text-decoration: none; padding: 32px; "><li> 
                     <%-- using c:out for security reasons --%>
-                    <h2 style="color: ghostwhite"><c:out value="${mnemonic.title}" /></h2>
-                    <p style="color: ghostwhite"><c:out value="${mnemonic.creator_userID}" /></p>
+                    <h2 style="color: black;"><c:out value="${mnemonic.title}" /></h2>
+                    <p style="color: black;"><c:out value="${mnemonic.creator_userID}" /></p>
             
                 </li> </a>
             
