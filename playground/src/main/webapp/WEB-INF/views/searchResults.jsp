@@ -22,7 +22,7 @@
                 <a href="#" style="text-decoration: none; padding: 32px; "><li> 
                     <%-- using c:out for security reasons --%>
                     <h2 style="color: black;"><c:out value="${mnemonic.title}" /></h2>
-                    <p style="color: black;"><c:out value="${mnemonic.creator_userID}" /></p>
+                    <p style="color: black;"><c:out value="${mnemonic.study_concept}" /></p>
             
                 </li> </a>
             
