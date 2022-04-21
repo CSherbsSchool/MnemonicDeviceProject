@@ -13,15 +13,16 @@
         <div id="navbar">
             <%@ include file="/resources/jspf/navbar.jspf"%>
 	</div>
+	<br><br><br><br><br>
         
-        <h1 style="color: ghostwhite">Search Results</h1>
+        <h1 style="color: black;">Search Results</h1>
         
         <ul class="grid cards">
-            <c:forEach items="${mnemonics}" var="i">
-                <a href="#" style="text-decoration: none;"><li> 
-                
-                    <h2 style="color: ghostwhite">Title</h2>
-                    <p style="color: ghostwhite">by user</p>
+            <c:forEach items="${mnemonics}" var="mnemonic">
+                <a href="#" style="text-decoration: none; padding: 32px; "><li> 
+                    <%-- using c:out for security reasons --%>
+                    <h2 style="color: black;"><c:out value="${mnemonic.title}" /></h2>
+                    <p style="color: black;"><c:out value="${mnemonic.study_concept}" /></p>
             
                 </li> </a>
             
