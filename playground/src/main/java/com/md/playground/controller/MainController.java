@@ -117,11 +117,15 @@ public class MainController {
 	}
 
 	@PostMapping("/searchForMnemonics")
-	public String searchForMnemonics(Model model, @RequestParam("query") String query)
+	public String searchForMnemonics(Model model, @RequestParam("query") String query, @RequestParam("userID") int userID)
 	{
 		List<Mnemonic> results = searchServiceImpl.searchForMnemonics(query);
 		System.out.println(results);
 		model.addAttribute("mnemonics", results);
+
+		User user = serviceImp.getUser(userID);
+		System.out.println(user.toString());
+		model.addAttribute("userName", user.getUserName());
 		return "searchResults";
 	}
 
