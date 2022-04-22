@@ -1,9 +1,11 @@
 package com.md.playground.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
 import com.md.playground.Service.SearchServiceImpl;
+import com.md.playground.entity.SavedMnemonic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -59,12 +61,13 @@ public class MainController {
 		model.addAttribute("userID", user.getId());
 		
 		//Get mnemonics that should be on the profile page
-		Stream<Mnemonic> userMnemonicStream = mnemonicServiceImpl.getMnemonicsCreatedByUser(userID).stream();
-		Stream<Mnemonic> savedMnemonicStream = savedMnemonicServiceImpl.getAllUserSavedMnemonics(userID).stream()
-				.map(savedMnemonic -> {
-					return mnemonicServiceImpl.getMnemonic(savedMnemonic.getMnemonic_id());
-				});
-		List<Mnemonic> allMnemonics = Stream.concat(userMnemonicStream, savedMnemonicStream).toList();
+		List<Mnemonic> allMnemonics = mnemonicServiceImpl.getMnemonicsCreatedByUser(userID);
+
+		List<SavedMnemonic> savedMnemonicList = savedMnemonicServiceImpl.getAllUserSavedMnemonics(userID);
+
+		for (SavedMnemonic savedMnemonic: savedMnemonicList) {
+			allMnemonics.add(mnemonicServiceImpl.getMnemonic(savedMnemonic.getMnemonic_id()));
+		}
 		
 		//Add the list of mnemonics to the model
 		model.addAttribute("mnemonics", allMnemonics);
