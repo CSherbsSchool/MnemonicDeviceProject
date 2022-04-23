@@ -2,7 +2,7 @@
 
 <div class="w3-top">
 	<div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-		<a href="#home" class="w3-bar-item w3-button">MnemonicStudy.com</a>
+		<a href=${pageContext.request.contextPath}/${userID}-${userName} class="w3-bar-item w3-button">MnemonicStudy.com</a>
 
 		<!-- Search -->
 		<form action="searchForMnemonics" method="post" class="w3-bar-item mdp-mat-icon-decorated" id="search-box-container">

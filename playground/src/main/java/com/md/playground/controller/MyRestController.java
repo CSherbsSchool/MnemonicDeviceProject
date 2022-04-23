@@ -112,10 +112,10 @@ public class MyRestController {
         savedMnemonicServiceImpl.deleteSavedMnemonic(savedMnemonicID);
     }
 
-    @GetMapping("/getSavedMnemonic")
+    /*@GetMapping("/getSavedMnemonic")
     public SavedMnemonic getSavedMnemonic(@RequestParam(name = "savedMnemonicID") int savedMnemonicID){
         return savedMnemonicServiceImpl.getSavedMnemonic(savedMnemonicID);
-    }
+    }*/
 
     @GetMapping("/getAllUserSavedMnemonics")
     List<SavedMnemonic> getAllUserSavedMnemonics(@RequestParam(name = "userID") int userID){

@@ -10,4 +10,5 @@ public interface TagService {
     void deleteTag(int id);
     List<Tag> getAllMnemonicTags(int mnemonic_id);
     List<Object[]> getMnemonicIdsOfTagsWithKeyword(String keyword);
+	List<Tag> splitTag(String tag, int mnemonic_id);
 }
