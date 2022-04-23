@@ -5,6 +5,7 @@
     <title>Study : MnemonicStudy.com</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/studyView.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
     <%@ include file="/resources/jspf/dependencies.jspf"%>
    <style>
@@ -48,10 +49,9 @@
             
         </div>
     </div>
-
+    <%@ include file="/resources/jspf/footer.jspf" %>
 	<script src = "/resources/js/studyView.js">
 	</script>
 
-    <%@ include file="/resources/jspf/footer.jspf" %>
 </body>
 </html>
