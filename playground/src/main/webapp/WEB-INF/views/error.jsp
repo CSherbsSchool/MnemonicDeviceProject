@@ -11,6 +11,7 @@
     <title>That's an error!</title>
     <%@ include file="/resources/jspf/dependencies.jspf"%>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
 </head>
 <body>
     <!-- Navbar (sit on top) -->

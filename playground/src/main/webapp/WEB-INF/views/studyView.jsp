@@ -5,8 +5,8 @@
     <title>Study : MnemonicStudy.com</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/resources/css/studyView.css" />
-<%@ include file="/resources/jspf/dependencies.jspf"%>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
+    <%@ include file="/resources/jspf/dependencies.jspf"%>
    <style>
         body {font-family: "Times New Roman", Georgia, Serif;}
         h1, h2, h3, h4, h5, h6 {
@@ -16,9 +16,9 @@
     </style>
 </head>
 <body style="background-color: ghostwhite;">
-    <div id="navbar">
-        <%@ include file="/resources/jspf/navbar.jspf" %>
-    </div>
+
+    <%@ include file="/resources/jspf/navbar.jspf" %>
+
     <h1 style="color: #37393A; padding: 0.5rem 2.5rem;">Study</h1>
     <div class="wrapper" style="clear: both">
         <div class="card">
@@ -48,7 +48,10 @@
             
         </div>
     </div>
+
 	<script src = "/resources/js/studyView.js">
 	</script>
+
+    <%@ include file="/resources/jspf/footer.jspf" %>
 </body>
 </html>

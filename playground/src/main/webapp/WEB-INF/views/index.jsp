@@ -9,6 +9,7 @@
 
 <%@ include file="/resources/jspf/dependencies.jspf"%>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/homepage.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
 
 </head>
 <body>
@@ -55,7 +56,7 @@
                    <button type="submit"  style="color:#000;border:0px #000 solid;background-color:#fff;" class="w3-bar-item w3-button mdp-mat-icon-decorated">
                        View profile <i class="material-icons">arrow_right</i>
                    </button>
-                   
+
                </form>
 		    <%--   <a class="w3-button mdp-mat-icon-decorated"
 	                 href="#"> 
@@ -65,8 +66,8 @@
 		      </c:otherwise>
 	        </c:choose>
         </div>
-
 	</div>
+	<%@ include file="/resources/jspf/footer.jspf"%>
 </body>
 </html>
 
