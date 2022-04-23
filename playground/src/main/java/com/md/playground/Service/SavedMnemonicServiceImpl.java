@@ -23,8 +23,8 @@ public class SavedMnemonicServiceImpl implements SavedMnemonicService{
     }
 
     @Override
-    public SavedMnemonic getSavedMnemonic(int id) {
-        return repository.findById(id).get();
+    public SavedMnemonic getSavedMnemonic(int userID, int mnemonic_id) {
+        return repository.getSavedMnemonic(userID, mnemonic_id);
     }
 
     @Override

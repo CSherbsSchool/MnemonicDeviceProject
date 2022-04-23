@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface SavedMnemonicService {
     void createSaveMnemonic(SavedMnemonic savedMnemonic);
-    SavedMnemonic getSavedMnemonic(int id);
+    SavedMnemonic getSavedMnemonic(int userID, int mnemonic_id);
     void deleteSavedMnemonic(int id);
     List<SavedMnemonic> getAllUserSavedMnemonics(int userID);
 }

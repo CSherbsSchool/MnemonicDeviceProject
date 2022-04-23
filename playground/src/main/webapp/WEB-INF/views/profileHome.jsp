@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 
 		<ul class="grid cards">
 			<c:forEach items="${mnemonics}" var="i">
-				<a href=${pageContext.request.contextPath}/viewFlashcard/${userID}/${i.mnemonic_id} style="text-decoration: none;"><li>			
+				<a href=${pageContext.request.contextPath}/viewFlashcard-${userID}-${i.mnemonic_id} style="text-decoration: none;"><li>			
 						<h2>${i.title}</h2>
 						<c:choose>
 							<c:when test="${i.isPrivate}">
@@ -44,24 +44,18 @@ h1, h2, h3, h4, h5, h6 {
 								<p style="color: lightgreen">Published</p>
 							</c:otherwise>
 						</c:choose>
+						<form:form action = "deleteMnemonic" method = "post">
+							<input type = "hidden" name = "mnemonic_id" value = "${i.mnemonic_id}"/>
+							<input type = "hidden" name = "userID" value = "${userID}"/>
+							<input type = "submit" value = "Delete" />
+						</form:form>
 				</li></a>
 
 			</c:forEach>
-
-
-			<%--   <a href="https://www.google.com" style="text-decoration: none;"><li>
-
-                    <h2>Set 4</h2>
-                    
-            </li></a>    
-            
-            <a href="https://www.apple.com" style="text-decoration: none;"><li>
-                <h2>Set 5</h2>
-                <p style="color: green">Published</p>
-            </li></a> 
---%>
+			
 		</ul>
 	</div>
+	
 	<div>
 		<%@ include file="/resources/jspf/footer.jspf"%>
 	</div>

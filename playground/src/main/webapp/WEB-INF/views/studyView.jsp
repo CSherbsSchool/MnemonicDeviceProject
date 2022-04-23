@@ -5,7 +5,7 @@
     <title>Study : MnemonicStudy.com</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="studyView.css" />
+    <link rel="stylesheet" href="/resources/css/studyView.css" />
 <%@ include file="/resources/jspf/dependencies.jspf"%>
    <style>
         body {font-family: "Times New Roman", Georgia, Serif;}
@@ -48,11 +48,7 @@
             
         </div>
     </div>
-<!-- <script>
-    var card = document.querySelector('.card');
-    card.addEventListener( 'click', function() {
-        card.classList.toggle('is-flipped');
-    });
-</script> -->
+	<script src = "/resources/js/studyView.js">
+	</script>
 </body>
 </html>

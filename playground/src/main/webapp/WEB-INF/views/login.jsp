@@ -8,7 +8,7 @@
 <body>
 <div class="container">
     <section id="content">
-        <form action="loginUser" type="get">
+        <form action="loginUser" method="post">
             <h1>Login</h1>
             <div>
                 <input type="text" name = "userName" placeholder="Username" required="" id="username" />
@@ -22,9 +22,9 @@
                 <a href="${pageContext.request.contextPath}/">Back To Home</a>
                 <a href="${pageContext.request.contextPath}/createAccount">Register</a>
             </div>
-        </form><!-- form -->
+        </form>
 
-    </section><!-- content -->
-</div><!-- container -->
+    </section>
+</div>
 </body>
 </html>

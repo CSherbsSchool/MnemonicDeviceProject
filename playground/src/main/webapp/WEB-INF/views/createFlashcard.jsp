@@ -30,13 +30,16 @@
 	<form action="addMnemonic" method="post">
 		<h1>Create Mnemonic</h1>
 		<div>
-			<input type="text" name="title" placeholder="Title" required="" id="title" />
+			<input type="text" name="title" style="width: 1000px;" placeholder="Title" required="" id="title" />
 		</div>
 		<div>
-			<input type="text" name="study_concept" placeholder="Study Concept" required="" id="study_concept" />
+			<input type="text" name="study_concept" style="width: 1000px;" placeholder="Study Concept (words separated by spaces)" required="" id="study_concept" />
 		</div>
 		<div>
-			<input type="text" name="mnemonic_device" placeholder="Mnemonic Device" required="" id="mnemonic_device" />
+			<input type="text" name="mnemonic_device" style="width: 1000px;" placeholder="Mnemonic Device(words separated by spaces)" required="" id="mnemonic_device" />
+		</div>
+		<div>
+			<input type="text" name="tag" style="width: 1000px;" placeholder="Optional: Search Tags (words separated by spaces)" id="tag" />
 		</div>
 		<div>
 			<input type='hidden' value='0' name='isPrivate'>
