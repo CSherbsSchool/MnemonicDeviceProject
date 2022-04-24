@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Create an Account</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/loginStyle.css" />
 </head>
 <body>
 <div class="container">
     <section id="content">
         <form action="addUser" method="post">
-            <h1>Login</h1>
+            <h1>Sign Up</h1>
             <div>
                 <input type="text" name="userName" placeholder="Username" required="" id="username" />
             </div>
