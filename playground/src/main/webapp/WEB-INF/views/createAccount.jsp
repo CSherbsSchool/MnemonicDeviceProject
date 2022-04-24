@@ -23,6 +23,8 @@
             </div>
             <div>
                 <input type="submit" value="Create an account" />
+                <a href="${pageContext.request.contextPath}/">Back To Home</a>
+                <a href="${pageContext.request.contextPath}/login">Log In</a>
             </div>
         </form><!-- form -->
 
