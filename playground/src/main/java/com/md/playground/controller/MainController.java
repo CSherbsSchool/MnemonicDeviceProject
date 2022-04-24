@@ -222,14 +222,19 @@ public class MainController {
 		
 		List<SavedMnemonic> savedList = savedMnemonicServiceImpl.getAllUserSavedMnemonics(userID);
 		boolean checkList = true;
-		for (SavedMnemonic eachMnemonic: savedList) {
-			if (savedMnemonic.getMnemonic_id() == eachMnemonic.getMnemonic_id()) {
-				checkList = true;
-				System.out.println("checked");
-				break;
-			}
-			else {
-				checkList = false;
+		if (savedList.isEmpty()) {
+			checkList = false;
+		}
+		else {
+			for (SavedMnemonic eachMnemonic: savedList) {
+				if (savedMnemonic.getMnemonic_id() == eachMnemonic.getMnemonic_id()) {
+					checkList = true;
+					System.out.println("checked");
+					break;
+				}
+				else {
+					checkList = false;
+				}
 			}
 		}
 		System.out.println(checkList);
