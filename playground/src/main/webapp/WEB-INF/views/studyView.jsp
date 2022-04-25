@@ -19,20 +19,13 @@
 <body style="background-color: ghostwhite;">
 
     <%@ include file="/resources/jspf/navbar.jspf" %>
-
+    <br><br><br><br>
     <h1 style="color: #37393A; padding: 0.5rem 2.5rem;">Study</h1>
+    <br><br><br>
+
     <div class="wrapper" style="clear: both">
         <div class="card">
             <div class="card__face card__face--front"> Device
-                <%-- <ul>
-                    <li>Please</li>
-                    <li>Excuse</li>
-                    <li>My</li>
-                    <li>Dear</li>
-                    <li>Aunt</li>
-                    <li>Sally</li>
-                    <li>${mnemonic.mnemonic_device}</li>
-                </ul>--%>
                 <ul>
                 	<c:forEach var = "word" items = "${device}">
                     <li>${word}</li>
@@ -46,7 +39,6 @@
                     </c:forEach>
                 </ul>
             </div>
-            
         </div>
     </div>
     <%@ include file="/resources/jspf/footer.jspf" %>

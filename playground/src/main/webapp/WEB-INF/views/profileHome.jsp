@@ -26,9 +26,9 @@ h1, h2, h3, h4, h5, h6 {
 <body style="background-color: ghostwhite;">
 
 	<%@ include file="/resources/jspf/navbar.jspf"%>
-	<br><br>
-	<h1 style="color: ghostwhite; padding: 0.5rem 2.5rem;">${userName}
-		Mnemonics</h1>
+	<br><br><br><br>
+	<h1 style="padding: 0.5rem 2.5rem;">My Mnemonics</h1>
+	<br><br><br>
 	<div class="wrapper" style="clear: both">
 
 		<ul class="grid cards">
@@ -55,8 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 		</ul>
 	</div>
 	
-	<div>
-		<%@ include file="/resources/jspf/footer.jspf"%>
-	</div>
+
+	<%@ include file="/resources/jspf/footer.jspf"%>
 </body>
 </html>
