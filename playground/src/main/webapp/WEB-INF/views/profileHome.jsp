@@ -23,10 +23,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 </style>
 </head>
-<body style="background-color: #414762;">
+<body style="background-color: ghostwhite;">
 
 	<%@ include file="/resources/jspf/navbar.jspf"%>
-
+	<br><br>
 	<h1 style="color: ghostwhite; padding: 0.5rem 2.5rem;">${userName}
 		Mnemonics</h1>
 	<div class="wrapper" style="clear: both">
@@ -40,13 +40,13 @@ h1, h2, h3, h4, h5, h6 {
 								<p style="color: #FF8585">Private</p>
 							</c:when>
 							<c:otherwise>
-								<p style="color: lightgreen">Published</p>
+								<p style="color: #2ad669">Published</p>
 							</c:otherwise>
 						</c:choose>
 						<form:form action = "deleteMnemonic" method = "post">
 							<input type = "hidden" name = "mnemonic_id" value = "${i.mnemonic_id}"/>
 							<input type = "hidden" name = "userID" value = "${userID}"/>
-							<input type = "submit" value = "Delete" />
+							<input type = "submit" value = "Delete" style="background: #2ad669"/>
 						</form:form>
 				</li></a>
 
