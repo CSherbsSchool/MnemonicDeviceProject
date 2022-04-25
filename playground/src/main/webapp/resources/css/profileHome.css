@@ -17,7 +17,7 @@
   .cards li {
 	border: 2px solid black;
 	border-radius:5px;
-	background-color: #232945;
+	background-color: #000050;
 	/* #8fbdd1; */
 	color: ghostwhite;
 	flex: 1 1 200px;
@@ -25,7 +25,7 @@
   
   .cards h2 {
 	text-align: center;
-	background-color: #232945;
+	background-color: #000050;
 	margin: 0;
 	padding: 10px;
   }
