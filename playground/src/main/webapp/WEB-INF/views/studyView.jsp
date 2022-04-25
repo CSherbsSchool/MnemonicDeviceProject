@@ -22,7 +22,7 @@
     <br><br><br><br>
     <h1 style="color: #37393A; padding: 0.5rem 2.5rem;">Study</h1>
     <br><br><br>
-    
+
     <div class="wrapper" style="clear: both">
         <div class="card">
             <div class="card__face card__face--front"> Device
