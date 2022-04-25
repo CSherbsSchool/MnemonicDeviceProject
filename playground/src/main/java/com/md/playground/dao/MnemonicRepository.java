@@ -13,6 +13,6 @@ public interface MnemonicRepository extends CrudRepository<Mnemonic, Integer> {
     @Query("SELECT m FROM Mnemonic m WHERE m.creator_userID = ?1")
     List<Mnemonic> getMnemonicsCreatedByUser(int user_id);
 
-    @Query("SELECT m FROM Mnemonic m WHERE m.title LIKE %?1%")
+    @Query("SELECT m FROM Mnemonic m WHERE m.title LIKE %?1% AND m.isPrivate IS NOT TRUE")
     List<Mnemonic> getMnemonicsWithKeyword(String keyword);
 }

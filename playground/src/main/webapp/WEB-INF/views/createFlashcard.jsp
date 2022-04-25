@@ -41,7 +41,7 @@
 			<input type="text" name="tag" style="width: 1000px;" placeholder="Optional: Search Tags (words separated by spaces)" id="tag" />
 		</div>
 		<div>
-			<input type='hidden' value='0' name='isPrivate'>
+			
 			<input type="checkbox" name="isPrivate" value="1" id="isPrivate" />
 			<label for="isPrivate"> Make Private</label>
 		</div>
