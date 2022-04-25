@@ -42,7 +42,7 @@
         </div>
     </div>
     <%@ include file="/resources/jspf/footer.jspf" %>
-    <script src="${pageContext.request.contextPath}/resources/js/home.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/studyView.js"></script>
 	</script>
 
 </body>
