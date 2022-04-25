@@ -25,9 +25,8 @@ h1, h2, h3, h4, h5, h6 {
 </head>
 <body style="background-color: #414762;">
 
-	<div id="navbar">
-		<%@ include file="/resources/jspf/navbar.jspf"%>
-	</div>
+	<%@ include file="/resources/jspf/navbar.jspf"%>
+
 	<h1 style="color: ghostwhite; padding: 0.5rem 2.5rem;">${userName}
 		Mnemonics</h1>
 	<div class="wrapper" style="clear: both">

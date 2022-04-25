@@ -7,11 +7,10 @@
 <%@ include file="/resources/jspf/dependencies.jspf"%>
 <title>Create a New Flashcard</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/mnemonicCreation.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
 </head>
 <body>
-	<div id="navbar">
-		<%@ include file="/resources/jspf/navbar.jspf"%>
-	</div>
+	<%@ include file="/resources/jspf/navbar.jspf"%>
 	<br>
 	<br>
 	<br>
@@ -53,5 +52,6 @@
 			<input type="submit" value="Post" />
 		</div>
 	</form>
+	<%@ include file="/resources/jspf/footer.jspf"%>
 </body>
 </html>

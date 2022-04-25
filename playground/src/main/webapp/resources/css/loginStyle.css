@@ -67,7 +67,7 @@ form:after {
     position: relative;
     text-align: center;
     text-shadow: 0 1px 0 #fff;
-    width: 400px;
+    width: 800px;
 }
 #content h1 {
     color: #7E7E7E;
@@ -203,7 +203,7 @@ form:after {
     margin: 20px 0 35px 15px;
     position: relative;
     text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-    width: 120px;
+    width: 300px;
 }
 #content form input[type="submit"]:hover {
     background: rgb(254,193,81);
