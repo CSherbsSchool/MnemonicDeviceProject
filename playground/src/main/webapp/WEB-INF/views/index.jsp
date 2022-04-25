@@ -2,14 +2,14 @@
 
 <html>
 <head>
-<title>Playground</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Playground</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/home.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
 
-
-<%@ include file="/resources/jspf/dependencies.jspf"%>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/homepage.css">
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
+	<%@ include file="/resources/jspf/dependencies.jspf"%>
 
 </head>
 <body>
@@ -23,50 +23,125 @@
 		<div class="w3-display-bottomleft w3-padding-large w3-opacity">
 		</div>
 	</header>
-	<br><br><br>
+	<br><br><br><br><br>
+	<div style="padding: 8rem;">
+		<div class="container">
+			<div class="slider">
+
+				<div class="box1 box">
+					<div class="bg"></div>
+					<div class="details">
+						<h1 style="color: white">Welcome to MnemonicStudy.com!</h1>
+						<p style="color: white">
+							Create and study mnemonics. Publish them for other users to study.
+						</p>
+						<button style="color: black">Get Started</button>
+					</div>
+
+					<div class="illustration"><div class="inner"></div></div>
+				</div>
+
+
+				<div class="box2 box">
+					<div class="bg"></div>
+					<div class="details">
+						<h1 style="color: white">Mnemonic</h1>
+						<p style="color: white">
+							noun: a device such as a pattern of letters, ideas, or associations that assists in remembering something.
+						</p>
+						<button>Get Started</button>
+					</div>
+
+					<div class="illustration"><div class="inner"></div></div>
+				</div>
+
+				<div class="box3 box">
+					<div class="bg"></div>
+					<div class="details">
+						<h1 style="color: white">Save for later</h1>
+						<p style="color: white">
+							Find a mnemonic you like?
+							Save it you your profile to study it later!
+						</p>
+						<button style="color: black">Study Now</button>
+					</div>
+
+					<div class="illustration"><div class="inner"></div></div>
+				</div>
+
+				<div class="box4 box">
+					<div class="bg"></div>
+					<div class="details">
+						<h1 style="color: white">Meet the Team</h1>
+						<p style="color: white">
+							Head to our about page to learn about our developers.
+							Or check out our team's github.
+						</p>
+						<button>Study Now</button>
+					</div>
+
+					<div class="illustration"><div class="inner"></div></div>
+				</div>
+
+				<div class="box5 box">
+					<div class="bg"></div>
+					<div class="details">
+						<h1 style="color: white">Share</h1>
+						<p style="color: white">
+							You really should share this website with your friends.
+							Oh wait...
+						</p>
+						<button style="color: black">Introduce Me</button>
+					</div>
+
+					<div class="illustration"><div class="inner"></div></div>
+				</div>
+
+
+			</div>
+
+			<svg xmlns="http://www.w3.org/2000/svg" class="prev" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff"/></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" class="next" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff"/></svg>
+			<div class="trail">
+				<div class="box1 active"></div>
+				<div class="box2"></div>
+				<div class="box3"></div>
+				<div class="box4"></div>
+				<div class="box5"></div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Page content -->
 	<div class="w3-content"  id="content" style="max-width: 1100px">
-		<h1 class="w3-center">Welcome To Mnemonic Device Flash Cards</h1>
-		<div style="background-color: rgba(0, 0, 0, 0.7); padding: 16px; border-radius: 4px;">
-		<h2>mnemonic</h2>
-		
-			<p>
-			  <b>noun:</b> a device such as a pattern of letters, ideas, or associations that assists in remembering something. (source: Oxford Languages via Google)
-			
-			</p>
-		</div>
-			<p>
-			With MnemonicStudy.com, you can browse the selection of mnemonics posted by other students, or you can post your own. All mnemonics you post
-			 are automatically saved to your profile, and you can also save other students' mnemonics to your profile page for quick access.
-			</p>
-		
-		<br>
+
 		<div id="button-container" class="w3-center">
 			<c:choose>
 			  <c:when test="${empty userName}">
 				<a class="w3-button mdp-mat-icon-decorated"
-		             href="${pageContext.request.contextPath}/login"> 
+		             href="${pageContext.request.contextPath}/login">
 		              Log in <i class="material-icons">arrow_right</i>
 		        </a>
 		      </c:when>
 		      <c:otherwise>
 		      <form action="profile" method="post" >
                    <input type="hidden" name="userID" value="${userID}"/>
-                   <button type="submit"  style="color:#000;border:0px #000 solid;background-color:#fff;" class="w3-bar-item w3-button mdp-mat-icon-decorated">
+                   <button type="submit"  style="color:#000;border:0px #000 solid;background-color: blue;" class="w3-bar-item w3-button mdp-mat-icon-decorated">
                        View profile <i class="material-icons">arrow_right</i>
                    </button>
-
                </form>
-		    <%--   <a class="w3-button mdp-mat-icon-decorated"
-	                 href="#"> 
-	                  
-	            </a> --%>
-	         
 		      </c:otherwise>
 	        </c:choose>
         </div>
+
 	</div>
+
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/CSSRulePlugin.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/home.js"></script>
 	<%@ include file="/resources/jspf/footer.jspf"%>
 </body>
 </html>
