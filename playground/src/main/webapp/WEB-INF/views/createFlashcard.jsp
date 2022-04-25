@@ -45,8 +45,8 @@
 		</div>
 		<br><br>
 		<div>
-			<input type='hidden' value='0' name='isPrivate'>
 			<input type="checkbox" name="isPrivate" value="1" id="isPrivate" style="width: 50px; height: 50px"/>
+			<input type="checkbox" name="isPrivate" value="1" id="isPrivate" />
 			<label for="isPrivate"> Make Private</label>
 		</div>
 		<br><br>
