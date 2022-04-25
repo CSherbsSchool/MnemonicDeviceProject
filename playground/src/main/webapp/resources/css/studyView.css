@@ -45,7 +45,7 @@ html, body {
   width: 100%;
   height: 100%;
   /* line-height: normal; */
-  color: white;
+  color: #2ad669;
   text-align: left;
   font-weight: bold;
   font-size: 40px;
@@ -60,10 +60,10 @@ html, body {
 }
 
 .card__face--front {
-  background: red;
+  background: #000050;
 }
 
 .card__face--back {
-  background: blue;
+  background: #000050;
   transform: rotateY(180deg);
 }

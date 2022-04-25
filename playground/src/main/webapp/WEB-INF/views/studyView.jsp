@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/studyView.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resou/css/navbar-footer.css">
     <%@ include file="/resources/jspf/dependencies.jspf"%>
    <style>
         body {font-family: "Times New Roman", Georgia, Serif;}
-        h1, h2, h3, h4, h5, h6 {
+        h1, h2, h3, h4, h5, h6 {You
             font-family: "Playfair Display";
             letter-spacing: 2px;
         }
@@ -20,19 +20,13 @@
 
     <%@ include file="/resources/jspf/navbar.jspf" %>
 
-    <h1 style="color: #37393A; padding: 0.5rem 2.5rem;">Study</h1>
+    <br><br><br><br>
+    <h1 style="padding: 0.5rem 2.5rem;">Study</h1>
+    <br><br><br>
+
     <div class="wrapper" style="clear: both">
         <div class="card">
             <div class="card__face card__face--front"> Device
-                <%-- <ul>
-                    <li>Please</li>
-                    <li>Excuse</li>
-                    <li>My</li>
-                    <li>Dear</li>
-                    <li>Aunt</li>
-                    <li>Sally</li>
-                    <li>${mnemonic.mnemonic_device}</li>
-                </ul>--%>
                 <ul>
                 	<c:forEach var = "word" items = "${device}">
                     <li>${word}</li>
@@ -46,7 +40,6 @@
                     </c:forEach>
                 </ul>
             </div>
-            
         </div>
     </div>
     <%@ include file="/resources/jspf/footer.jspf" %>
