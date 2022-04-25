@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/studyView.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resou/css/navbar-footer.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
     <%@ include file="/resources/jspf/dependencies.jspf"%>
    <style>
         body {font-family: "Times New Roman", Georgia, Serif;}
-        h1, h2, h3, h4, h5, h6 {You
+        h1, h2, h3, h4, h5, h6 {
             font-family: "Playfair Display";
             letter-spacing: 2px;
         }
@@ -19,11 +19,10 @@
 <body style="background-color: ghostwhite;">
 
     <%@ include file="/resources/jspf/navbar.jspf" %>
-
     <br><br><br><br>
-    <h1 style="padding: 0.5rem 2.5rem;">Study</h1>
+    <h1 style="color: #37393A; padding: 0.5rem 2.5rem;">Study</h1>
     <br><br><br>
-
+    
     <div class="wrapper" style="clear: both">
         <div class="card">
             <div class="card__face card__face--front"> Device
