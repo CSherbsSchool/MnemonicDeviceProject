@@ -81,8 +81,7 @@
 				<div class="details">
 					<h1 style="color: white">Meet the Team</h1>
 					<p style="color: white">
-						Head to our about page to learn about our developers.
-						Or check out our team's github.
+						Head to our github to learn about our developers.
 					</p>
 					<a href="https://github.com/CSherbsSchool/MnemonicDeviceProject/tree/main/team_Intro" target="_blank"><button>Introduce Me</button></a>
 				</div>
@@ -119,29 +118,6 @@
 	</div>
 </div>
 
-<!-- Page content -->
-<div class="w3-content"  id="content" style="max-width: 1100px">
-
-	<div id="button-container" class="w3-center">
-		<c:choose>
-			<c:when test="${empty userName}">
-				<a class="w3-button mdp-mat-icon-decorated"
-				   href="${pageContext.request.contextPath}/login">
-					Log in <i class="material-icons">arrow_right</i>
-				</a>
-			</c:when>
-			<c:otherwise>
-				<form action="profile" method="post" >
-					<input type="hidden" name="userID" value="${userID}"/>
-					<button type="submit" style="color:#000;border:0px #000 solid;background-color: #6bda5c;" class="w3-bar-item w3-button mdp-mat-icon-decorated">
-						View profile <i class="material-icons">arrow_right</i>
-					</button>
-				</form>
-			</c:otherwise>
-		</c:choose>
-	</div>
-
-</div>
 
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
