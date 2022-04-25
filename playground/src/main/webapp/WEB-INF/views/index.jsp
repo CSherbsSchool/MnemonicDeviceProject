@@ -84,7 +84,7 @@
 						Head to our about page to learn about our developers.
 						Or check out our team's github.
 					</p>
-					<a href="https://github.com/CSherbsSchool/MnemonicDeviceProject" target="_blank"><button>Introduce Me</button></a>
+					<a href="https://github.com/CSherbsSchool/MnemonicDeviceProject/tree/main/team_Intro" target="_blank"><button>Introduce Me</button></a>
 				</div>
 
 				<div class="illustration"><div class="inner"></div></div>
