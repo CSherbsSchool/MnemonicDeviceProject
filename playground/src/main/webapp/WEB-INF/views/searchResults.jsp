@@ -25,12 +25,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 </style>
 </head>
-<body style="background-color: #414762;">
+<body style="background-color: ghostwhite">
 
 	<%@ include file="/resources/jspf/navbar.jspf"%>
-
-	<h1 style="color: ghostwhite; padding: 0.5rem 2.5rem;">Search
-		Results</h1>
+	<br><br><br><br>
+	<h1 style="color: ghostwhite; padding: 0.5rem 2.5rem;">Search Results</h1>
+	<br><br><br>
 	<div class="wrapper" style="clear: both">
 
 		<ul class="grid cards">
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
             		<form:form action = "saveMnemonic" method = "post">
 							<input type = "hidden" name = "mnemonic_id" value = "${mnemonic.mnemonic_id}"/>
 							<input type = "hidden" name = "userID" value = "${userID}"/>
-							<input type = "submit" value = "Save" />
+							<input type = "submit" value = "Save" style="background: #2ad669"/>
 					</form:form>
                 </li> </a>
                 
