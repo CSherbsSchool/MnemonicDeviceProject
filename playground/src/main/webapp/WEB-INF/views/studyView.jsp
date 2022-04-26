@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/studyView.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
     <%@ include file="/resources/jspf/dependencies.jspf"%>
+    <%@ include file="/resources/jspf/favicon.jspf"%>
    <style>
         body {font-family: "Times New Roman", Georgia, Serif;}
         h1, h2, h3, h4, h5, h6 {

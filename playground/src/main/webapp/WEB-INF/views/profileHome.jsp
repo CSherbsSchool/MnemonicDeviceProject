@@ -10,6 +10,7 @@
 	href="${pageContext.request.contextPath}/resources/css/profileHome.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
+	<%@ include file="/resources/jspf/favicon.jspf"%>
 <%@ include file="/resources/jspf/dependencies.jspf"%>
 
 <style>
