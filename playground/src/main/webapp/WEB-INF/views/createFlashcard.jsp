@@ -8,6 +8,7 @@
 	<title>Create a New Flashcard</title>
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/mnemonicCreation.css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
+	<%@ include file="/resources/jspf/favicon.jspf"%>
 </head>
 <body style="background: ghostwhite">
 <%@ include file="/resources/jspf/navbar.jspf"%>

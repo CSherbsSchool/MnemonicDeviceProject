@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <title>Create an Account</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/loginStyle.css" />
+    <%@ include file="/resources/jspf/favicon.jspf"%>
 </head>
 <body>
 <div class="container">

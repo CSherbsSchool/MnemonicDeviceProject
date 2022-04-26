@@ -12,6 +12,7 @@
     <%@ include file="/resources/jspf/dependencies.jspf"%>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/homepage.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/navbar-footer.css">
+    <%@ include file="/resources/jspf/favicon.jspf"%>
 </head>
 <body>
     <!-- Navbar (sit on top) -->

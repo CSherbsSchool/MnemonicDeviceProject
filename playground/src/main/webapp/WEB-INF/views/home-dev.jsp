@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/myStyle.css">
+    <%@ include file="/resources/jspf/favicon.jspf"%>
     <%-- <style>
         body {font-family: "Times New Roman", Georgia, Serif;}
         h1, h2, h3, h4, h5, h6 {
